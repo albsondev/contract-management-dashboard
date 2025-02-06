@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import DataTable from 'react-data-table-component';
 import { formatDate } from "../../utils/formatDate";
+import { TableColumn } from 'react-data-table-component';
 import ContractsFilters from "./ContractsFilters";
 import { useNavigate } from "react-router-dom";
 import mockContracts from "../../assets/mockContracts.json"; // Importa os contratos mockados
@@ -20,21 +22,13 @@ const ContractsTable = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Carregar contratos do localStorage
     const savedContracts = JSON.parse(localStorage.getItem("contracts") || "[]");
-    
-    // Combinar contratos do localStorage com os contratos mockados
     const allContracts = [...mockContracts, ...savedContracts];
-
-    // Ordenar contratos por ID (assumindo que IDs mais altos são mais recentes)
-    allContracts.sort((a, b) => b.id - a.id);
-
     setContracts(allContracts);
     setFilteredContracts(allContracts);
 
-    // Persistir contratos do mock apenas se localStorage estiver vazio
     if (savedContracts.length === 0) {
-      localStorage.setItem("contracts", JSON.stringify(mockContracts)); // Persistir os mockados no localStorage
+      localStorage.setItem("contracts", JSON.stringify(mockContracts));
     }
   }, []);
 
@@ -42,70 +36,47 @@ const ContractsTable = () => {
     let filtered = contracts;
 
     if (filters.status) {
-      filtered = filtered.filter((c) => c.status === filters.status);
+      filtered = filtered.filter(c => c.status === filters.status);
     }
     if (filters.type) {
-      filtered = filtered.filter((c) => c.type === filters.type);
+      filtered = filtered.filter(c => c.type === filters.type);
     }
     if (filters.startDate) {
-      filtered = filtered.filter((c) => new Date(c.startDate) >= new Date(filters.startDate));
+      filtered = filtered.filter(c => new Date(c.startDate) >= new Date(filters.startDate));
     }
     if (filters.endDate) {
-      filtered = filtered.filter((c) => new Date(c.endDate) <= new Date(filters.endDate));
+      filtered = filtered.filter(c => new Date(c.endDate) <= new Date(filters.endDate));
     }
 
     setFilteredContracts(filtered);
   };
 
+
+  const columns: TableColumn<Contract>[] = [
+    { name: 'ID', selector: (row: Contract) => row.id, sortable: true },
+    { name: 'Cliente', selector: (row: Contract) => row.client, sortable: true },
+    { name: 'Início', selector: (row: Contract) => row.startDate, format: (row: Contract) => formatDate(row.startDate), sortable: true },
+    { name: 'Vencimento', selector: (row: Contract) => row.endDate, format: (row: Contract) => formatDate(row.endDate), sortable: true },
+    { name: 'Status', selector: (row: Contract) => row.status, sortable: true },
+    { name: 'Valor', selector: (row: Contract) => row.value, cell: (row: Contract) => `R$ ${row.value.toLocaleString('pt-BR')}`, sortable: true }
+  ];
+
   return (
     <div className="bg-white shadow rounded-lg p-6">
       <h3 className="text-lg font-semibold text-gray-800 mb-4">Lista de Contratos</h3>
-      
-      {/* Filtros dentro da Tabela */}
+
       <ContractsFilters onAddClick={() => navigate("/contracts")} onFilterChange={handleFilterChange} />
 
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="bg-gray-100">
-              <th className="p-2 text-left">ID</th>
-              <th className="p-2 text-left">Cliente</th>
-              <th className="p-2 text-left">Início</th>
-              <th className="p-2 text-left">Vencimento</th>
-              <th className="p-2 text-left">Status</th>
-              <th className="p-2 text-left">Valor</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredContracts.length > 0 ? (
-              filteredContracts.map((contract) => (
-                <tr key={contract.id} className="border-b">
-                  <td className="p-2">{contract.id}</td>
-                  <td className="p-2">{contract.client}</td>
-                  <td className="p-2">{formatDate(contract.startDate)}</td>
-                  <td className="p-2">{formatDate(contract.endDate)}</td>
-                  <td className="p-2">
-                    <span
-                      className={`px-2 py-1 rounded text-white text-sm ${
-                        contract.status === "Ativo" ? "bg-green-500" : "bg-red-500"
-                      }`}
-                    >
-                      {contract.status}
-                    </span>
-                  </td>
-                  <td className="p-2">R$ {contract.value.toLocaleString("pt-BR")}</td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan={6} className="text-center text-gray-600 p-4">
-                  Nenhum contrato encontrado.
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
+      <DataTable
+        title="Contratos"
+        columns={columns}
+        data={filteredContracts}
+        pagination
+        striped
+        highlightOnHover
+        responsive
+        defaultSortFieldId="id"
+      />
     </div>
   );
 };

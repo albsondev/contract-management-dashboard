@@ -2,7 +2,6 @@ import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 import mockContracts from "../../assets/mockContracts.json";
 
-// Garantindo que mockContracts está tipado corretamente
 const contracts: Contract[] = mockContracts as Contract[];
 
 interface Contract {
@@ -17,7 +16,6 @@ interface Contract {
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-// Função para obter a distribuição de contratos por tipo
 const getDistributionByType = () => {
   const distribution = {
     Serviços: 0,
