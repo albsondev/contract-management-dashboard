@@ -1,21 +1,902 @@
 [
-    {
-      "id": 1,
-      "client": "Empresa XYZ",
-      "startDate": "2024-01-10",
-      "endDate": "2025-01-10",
-      "status": "Ativo",
-      "value": 15000,
-      "type": "Serviços"
-    },
-    {
-      "id": 2,
-      "client": "Fornecedor ABC",
-      "startDate": "2023-05-20",
-      "endDate": "2024-05-20",
-      "status": "Expirado",
-      "value": 32000,
-      "type": "Fornecimento"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "client": "Empresa 1",
+    "startDate": "2023-12-27",
+    "endDate": "2025-02-07",
+    "status": "Renovação Pendente",
+    "value": 18873,
+    "type": "Serviços"
+  },
+  {
+    "id": 2,
+    "client": "Empresa 2",
+    "startDate": "2022-12-18",
+    "endDate": "2024-09-04",
+    "status": "Expirado",
+    "value": 54159,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 3,
+    "client": "Empresa 3",
+    "startDate": "2022-08-08",
+    "endDate": "2025-10-22",
+    "status": "Ativo",
+    "value": 34234,
+    "type": "Serviços"
+  },
+  {
+    "id": 4,
+    "client": "Empresa 4",
+    "startDate": "2022-10-27",
+    "endDate": "2024-05-17",
+    "status": "Expirado",
+    "value": 66631,
+    "type": "Manutenção"
+  },
+  {
+    "id": 5,
+    "client": "Empresa 5",
+    "startDate": "2023-06-09",
+    "endDate": "2026-04-14",
+    "status": "Ativo",
+    "value": 58663,
+    "type": "Serviços"
+  },
+  {
+    "id": 6,
+    "client": "Empresa 6",
+    "startDate": "2023-04-02",
+    "endDate": "2024-12-20",
+    "status": "Expirado",
+    "value": 61112,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 7,
+    "client": "Empresa 7",
+    "startDate": "2023-02-03",
+    "endDate": "2025-03-27",
+    "status": "Renovação Pendente",
+    "value": 93317,
+    "type": "Serviços"
+  },
+  {
+    "id": 8,
+    "client": "Empresa 8",
+    "startDate": "2022-12-09",
+    "endDate": "2024-11-07",
+    "status": "Expirado",
+    "value": 50287,
+    "type": "Manutenção"
+  },
+  {
+    "id": 9,
+    "client": "Empresa 9",
+    "startDate": "2022-04-23",
+    "endDate": "2025-05-07",
+    "status": "Expirado",
+    "value": 91600,
+    "type": "Manutenção"
+  },
+  {
+    "id": 10,
+    "client": "Empresa 10",
+    "startDate": "2023-08-28",
+    "endDate": "2025-05-17",
+    "status": "Expirado",
+    "value": 18671,
+    "type": "Manutenção"
+  },
+  {
+    "id": 11,
+    "client": "Empresa 11",
+    "startDate": "2023-02-12",
+    "endDate": "2025-04-12",
+    "status": "Ativo",
+    "value": 31130,
+    "type": "Manutenção"
+  },
+  {
+    "id": 12,
+    "client": "Empresa 12",
+    "startDate": "2023-01-01",
+    "endDate": "2025-05-31",
+    "status": "Expirado",
+    "value": 71824,
+    "type": "Serviços"
+  },
+  {
+    "id": 13,
+    "client": "Empresa 13",
+    "startDate": "2022-05-14",
+    "endDate": "2024-03-23",
+    "status": "Expirado",
+    "value": 34730,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 14,
+    "client": "Empresa 14",
+    "startDate": "2023-07-10",
+    "endDate": "2025-02-22",
+    "status": "Ativo",
+    "value": 65944,
+    "type": "Manutenção"
+  },
+  {
+    "id": 15,
+    "client": "Empresa 15",
+    "startDate": "2022-11-17",
+    "endDate": "2025-08-16",
+    "status": "Expirado",
+    "value": 36209,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 16,
+    "client": "Empresa 16",
+    "startDate": "2023-09-10",
+    "endDate": "2026-11-04",
+    "status": "Expirado",
+    "value": 96081,
+    "type": "Consultoria"
+  },
+  {
+    "id": 17,
+    "client": "Empresa 17",
+    "startDate": "2023-04-14",
+    "endDate": "2024-10-18",
+    "status": "Expirado",
+    "value": 55308,
+    "type": "Manutenção"
+  },
+  {
+    "id": 18,
+    "client": "Empresa 18",
+    "startDate": "2022-01-12",
+    "endDate": "2024-09-18",
+    "status": "Expirado",
+    "value": 103087,
+    "type": "Serviços"
+  },
+  {
+    "id": 19,
+    "client": "Empresa 19",
+    "startDate": "2023-10-13",
+    "endDate": "2026-08-08",
+    "status": "Renovação Pendente",
+    "value": 16219,
+    "type": "Manutenção"
+  },
+  {
+    "id": 20,
+    "client": "Empresa 20",
+    "startDate": "2022-09-04",
+    "endDate": "2025-10-12",
+    "status": "Ativo",
+    "value": 26051,
+    "type": "Manutenção"
+  },
+  {
+    "id": 21,
+    "client": "Empresa 21",
+    "startDate": "2022-03-07",
+    "endDate": "2026-10-16",
+    "status": "Expirado",
+    "value": 61588,
+    "type": "Serviços"
+  },
+  {
+    "id": 22,
+    "client": "Empresa 22",
+    "startDate": "2022-01-08",
+    "endDate": "2024-02-07",
+    "status": "Expirado",
+    "value": 13633,
+    "type": "Manutenção"
+  },
+  {
+    "id": 23,
+    "client": "Empresa 23",
+    "startDate": "2023-04-20",
+    "endDate": "2025-08-29",
+    "status": "Ativo",
+    "value": 92114,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 24,
+    "client": "Empresa 24",
+    "startDate": "2022-02-12",
+    "endDate": "2024-07-18",
+    "status": "Expirado",
+    "value": 48941,
+    "type": "Consultoria"
+  },
+  {
+    "id": 25,
+    "client": "Empresa 25",
+    "startDate": "2023-08-31",
+    "endDate": "2026-08-04",
+    "status": "Expirado",
+    "value": 10041,
+    "type": "Manutenção"
+  },
+  {
+    "id": 26,
+    "client": "Empresa 26",
+    "startDate": "2023-09-15",
+    "endDate": "2026-10-30",
+    "status": "Expirado",
+    "value": 58057,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 27,
+    "client": "Empresa 27",
+    "startDate": "2022-11-05",
+    "endDate": "2025-07-18",
+    "status": "Ativo",
+    "value": 77818,
+    "type": "Consultoria"
+  },
+  {
+    "id": 28,
+    "client": "Empresa 28",
+    "startDate": "2022-09-01",
+    "endDate": "2025-03-31",
+    "status": "Expirado",
+    "value": 42249,
+    "type": "Consultoria"
+  },
+  {
+    "id": 29,
+    "client": "Empresa 29",
+    "startDate": "2022-11-01",
+    "endDate": "2025-03-04",
+    "status": "Expirado",
+    "value": 94138,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 30,
+    "client": "Empresa 30",
+    "startDate": "2022-06-14",
+    "endDate": "2024-06-02",
+    "status": "Expirado",
+    "value": 35291,
+    "type": "Consultoria"
+  },
+  {
+    "id": 31,
+    "client": "Empresa 31",
+    "startDate": "2023-03-08",
+    "endDate": "2024-03-10",
+    "status": "Expirado",
+    "value": 50967,
+    "type": "Consultoria"
+  },
+  {
+    "id": 32,
+    "client": "Empresa 32",
+    "startDate": "2022-02-02",
+    "endDate": "2024-10-09",
+    "status": "Expirado",
+    "value": 69540,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 33,
+    "client": "Empresa 33",
+    "startDate": "2023-02-05",
+    "endDate": "2026-11-19",
+    "status": "Ativo",
+    "value": 104631,
+    "type": "Consultoria"
+  },
+  {
+    "id": 34,
+    "client": "Empresa 34",
+    "startDate": "2022-01-30",
+    "endDate": "2025-06-01",
+    "status": "Renovação Pendente",
+    "value": 35121,
+    "type": "Serviços"
+  },
+  {
+    "id": 35,
+    "client": "Empresa 35",
+    "startDate": "2022-12-26",
+    "endDate": "2024-03-21",
+    "status": "Expirado",
+    "value": 27715,
+    "type": "Serviços"
+  },
+  {
+    "id": 36,
+    "client": "Empresa 36",
+    "startDate": "2022-03-24",
+    "endDate": "2024-10-16",
+    "status": "Expirado",
+    "value": 34216,
+    "type": "Manutenção"
+  },
+  {
+    "id": 37,
+    "client": "Empresa 37",
+    "startDate": "2023-11-16",
+    "endDate": "2026-04-26",
+    "status": "Expirado",
+    "value": 101480,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 38,
+    "client": "Empresa 38",
+    "startDate": "2023-11-12",
+    "endDate": "2026-09-15",
+    "status": "Expirado",
+    "value": 82812,
+    "type": "Serviços"
+  },
+  {
+    "id": 39,
+    "client": "Empresa 39",
+    "startDate": "2023-08-13",
+    "endDate": "2026-12-04",
+    "status": "Ativo",
+    "value": 59300,
+    "type": "Manutenção"
+  },
+  {
+    "id": 40,
+    "client": "Empresa 40",
+    "startDate": "2022-01-06",
+    "endDate": "2025-06-10",
+    "status": "Expirado",
+    "value": 21580,
+    "type": "Serviços"
+  },
+  {
+    "id": 41,
+    "client": "Empresa 41",
+    "startDate": "2023-07-12",
+    "endDate": "2024-10-11",
+    "status": "Expirado",
+    "value": 30745,
+    "type": "Manutenção"
+  },
+  {
+    "id": 42,
+    "client": "Empresa 42",
+    "startDate": "2023-10-19",
+    "endDate": "2026-04-18",
+    "status": "Expirado",
+    "value": 40517,
+    "type": "Serviços"
+  },
+  {
+    "id": 43,
+    "client": "Empresa 43",
+    "startDate": "2022-07-27",
+    "endDate": "2025-09-11",
+    "status": "Renovação Pendente",
+    "value": 75342,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 44,
+    "client": "Empresa 44",
+    "startDate": "2023-08-31",
+    "endDate": "2024-07-13",
+    "status": "Expirado",
+    "value": 85388,
+    "type": "Manutenção"
+  },
+  {
+    "id": 45,
+    "client": "Empresa 45",
+    "startDate": "2023-08-29",
+    "endDate": "2026-07-18",
+    "status": "Ativo",
+    "value": 6620,
+    "type": "Consultoria"
+  },
+  {
+    "id": 46,
+    "client": "Empresa 46",
+    "startDate": "2022-10-28",
+    "endDate": "2024-12-09",
+    "status": "Expirado",
+    "value": 12259,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 47,
+    "client": "Empresa 47",
+    "startDate": "2023-12-30",
+    "endDate": "2024-06-21",
+    "status": "Expirado",
+    "value": 65675,
+    "type": "Manutenção"
+  },
+  {
+    "id": 48,
+    "client": "Empresa 48",
+    "startDate": "2023-07-30",
+    "endDate": "2026-01-21",
+    "status": "Expirado",
+    "value": 58362,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 49,
+    "client": "Empresa 49",
+    "startDate": "2023-05-16",
+    "endDate": "2024-12-03",
+    "status": "Expirado",
+    "value": 20817,
+    "type": "Serviços"
+  },
+  {
+    "id": 50,
+    "client": "Empresa 50",
+    "startDate": "2023-06-08",
+    "endDate": "2025-12-10",
+    "status": "Expirado",
+    "value": 56462,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 51,
+    "client": "Empresa 51",
+    "startDate": "2023-04-16",
+    "endDate": "2025-04-17",
+    "status": "Renovação Pendente",
+    "value": 29489,
+    "type": "Manutenção"
+  },
+  {
+    "id": 52,
+    "client": "Empresa 52",
+    "startDate": "2022-08-17",
+    "endDate": "2024-09-30",
+    "status": "Expirado",
+    "value": 74544,
+    "type": "Consultoria"
+  },
+  {
+    "id": 53,
+    "client": "Empresa 53",
+    "startDate": "2022-01-26",
+    "endDate": "2026-01-26",
+    "status": "Expirado",
+    "value": 19528,
+    "type": "Serviços"
+  },
+  {
+    "id": 54,
+    "client": "Empresa 54",
+    "startDate": "2023-05-26",
+    "endDate": "2024-08-16",
+    "status": "Expirado",
+    "value": 22869,
+    "type": "Manutenção"
+  },
+  {
+    "id": 55,
+    "client": "Empresa 55",
+    "startDate": "2022-04-09",
+    "endDate": "2025-02-04",
+    "status": "Expirado",
+    "value": 41007,
+    "type": "Serviços"
+  },
+  {
+    "id": 56,
+    "client": "Empresa 56",
+    "startDate": "2022-01-25",
+    "endDate": "2025-01-03",
+    "status": "Expirado",
+    "value": 11014,
+    "type": "Serviços"
+  },
+  {
+    "id": 57,
+    "client": "Empresa 57",
+    "startDate": "2023-12-06",
+    "endDate": "2026-02-07",
+    "status": "Expirado",
+    "value": 82390,
+    "type": "Consultoria"
+  },
+  {
+    "id": 58,
+    "client": "Empresa 58",
+    "startDate": "2022-11-18",
+    "endDate": "2025-11-03",
+    "status": "Ativo",
+    "value": 9019,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 59,
+    "client": "Empresa 59",
+    "startDate": "2023-08-02",
+    "endDate": "2026-01-12",
+    "status": "Renovação Pendente",
+    "value": 53431,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 60,
+    "client": "Empresa 60",
+    "startDate": "2022-01-25",
+    "endDate": "2025-04-20",
+    "status": "Expirado",
+    "value": 50050,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 61,
+    "client": "Empresa 61",
+    "startDate": "2023-09-19",
+    "endDate": "2024-09-19",
+    "status": "Expirado",
+    "value": 11351,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 62,
+    "client": "Empresa 62",
+    "startDate": "2022-04-14",
+    "endDate": "2026-08-10",
+    "status": "Expirado",
+    "value": 24585,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 63,
+    "client": "Empresa 63",
+    "startDate": "2022-04-13",
+    "endDate": "2024-05-07",
+    "status": "Expirado",
+    "value": 50395,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 64,
+    "client": "Empresa 64",
+    "startDate": "2023-06-29",
+    "endDate": "2025-07-06",
+    "status": "Expirado",
+    "value": 38994,
+    "type": "Manutenção"
+  },
+  {
+    "id": 65,
+    "client": "Empresa 65",
+    "startDate": "2023-09-22",
+    "endDate": "2024-05-12",
+    "status": "Expirado",
+    "value": 80477,
+    "type": "Serviços"
+  },
+  {
+    "id": 66,
+    "client": "Empresa 66",
+    "startDate": "2023-04-01",
+    "endDate": "2026-02-21",
+    "status": "Ativo",
+    "value": 82487,
+    "type": "Serviços"
+  },
+  {
+    "id": 67,
+    "client": "Empresa 67",
+    "startDate": "2022-09-10",
+    "endDate": "2025-05-05",
+    "status": "Renovação Pendente",
+    "value": 43476,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 68,
+    "client": "Empresa 68",
+    "startDate": "2022-04-19",
+    "endDate": "2025-03-10",
+    "status": "Ativo",
+    "value": 75648,
+    "type": "Consultoria"
+  },
+  {
+    "id": 69,
+    "client": "Empresa 69",
+    "startDate": "2022-03-31",
+    "endDate": "2026-06-18",
+    "status": "Renovação Pendente",
+    "value": 8015,
+    "type": "Serviços"
+  },
+  {
+    "id": 70,
+    "client": "Empresa 70",
+    "startDate": "2022-05-04",
+    "endDate": "2024-04-17",
+    "status": "Expirado",
+    "value": 59459,
+    "type": "Consultoria"
+  },
+  {
+    "id": 71,
+    "client": "Empresa 71",
+    "startDate": "2022-10-19",
+    "endDate": "2026-02-02",
+    "status": "Expirado",
+    "value": 64215,
+    "type": "Consultoria"
+  },
+  {
+    "id": 72,
+    "client": "Empresa 72",
+    "startDate": "2023-02-06",
+    "endDate": "2024-09-27",
+    "status": "Expirado",
+    "value": 89569,
+    "type": "Consultoria"
+  },
+  {
+    "id": 73,
+    "client": "Empresa 73",
+    "startDate": "2023-05-05",
+    "endDate": "2024-08-22",
+    "status": "Expirado",
+    "value": 54656,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 74,
+    "client": "Empresa 74",
+    "startDate": "2023-12-29",
+    "endDate": "2026-05-01",
+    "status": "Renovação Pendente",
+    "value": 57039,
+    "type": "Manutenção"
+  },
+  {
+    "id": 75,
+    "client": "Empresa 75",
+    "startDate": "2022-07-20",
+    "endDate": "2025-10-10",
+    "status": "Ativo",
+    "value": 20194,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 76,
+    "client": "Empresa 76",
+    "startDate": "2023-03-07",
+    "endDate": "2025-02-03",
+    "status": "Expirado",
+    "value": 10826,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 77,
+    "client": "Empresa 77",
+    "startDate": "2023-10-05",
+    "endDate": "2024-02-06",
+    "status": "Expirado",
+    "value": 41412,
+    "type": "Manutenção"
+  },
+  {
+    "id": 78,
+    "client": "Empresa 78",
+    "startDate": "2023-05-18",
+    "endDate": "2024-06-21",
+    "status": "Expirado",
+    "value": 46065,
+    "type": "Consultoria"
+  },
+  {
+    "id": 79,
+    "client": "Empresa 79",
+    "startDate": "2022-08-25",
+    "endDate": "2025-10-09",
+    "status": "Expirado",
+    "value": 54091,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 80,
+    "client": "Empresa 80",
+    "startDate": "2022-08-23",
+    "endDate": "2025-10-19",
+    "status": "Renovação Pendente",
+    "value": 50832,
+    "type": "Serviços"
+  },
+  {
+    "id": 81,
+    "client": "Empresa 81",
+    "startDate": "2022-11-02",
+    "endDate": "2025-01-26",
+    "status": "Expirado",
+    "value": 50789,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 82,
+    "client": "Empresa 82",
+    "startDate": "2023-12-23",
+    "endDate": "2026-03-17",
+    "status": "Expirado",
+    "value": 12007,
+    "type": "Serviços"
+  },
+  {
+    "id": 83,
+    "client": "Empresa 83",
+    "startDate": "2022-03-28",
+    "endDate": "2025-06-23",
+    "status": "Ativo",
+    "value": 82179,
+    "type": "Manutenção"
+  },
+  {
+    "id": 84,
+    "client": "Empresa 84",
+    "startDate": "2023-07-19",
+    "endDate": "2026-05-19",
+    "status": "Ativo",
+    "value": 87035,
+    "type": "Manutenção"
+  },
+  {
+    "id": 85,
+    "client": "Empresa 85",
+    "startDate": "2023-06-20",
+    "endDate": "2026-01-07",
+    "status": "Renovação Pendente",
+    "value": 33118,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 86,
+    "client": "Empresa 86",
+    "startDate": "2023-01-20",
+    "endDate": "2024-05-10",
+    "status": "Expirado",
+    "value": 51419,
+    "type": "Consultoria"
+  },
+  {
+    "id": 87,
+    "client": "Empresa 87",
+    "startDate": "2022-06-28",
+    "endDate": "2025-09-12",
+    "status": "Expirado",
+    "value": 15375,
+    "type": "Consultoria"
+  },
+  {
+    "id": 88,
+    "client": "Empresa 88",
+    "startDate": "2023-04-24",
+    "endDate": "2025-07-08",
+    "status": "Ativo",
+    "value": 51916,
+    "type": "Fornecimento"
+  },
+  {
+    "id": 89,
+    "client": "Empresa 89",
+    "startDate": "2022-11-02",
+    "endDate": "2024-05-07",
+    "status": "Expirado",
+    "value": 79587,
+    "type": "Serviços"
+  },
+  {
+    "id": 90,
+    "client": "Empresa 90",
+    "startDate": "2023-03-02",
+    "endDate": "2026-05-13",
+    "status": "Renovação Pendente",
+    "value": 62446,
+    "type": "Serviços"
+  },
+  {
+    "id": 91,
+    "client": "Empresa 91",
+    "startDate": "2023-02-14",
+    "endDate": "2025-11-23",
+    "status": "Ativo",
+    "value": 27818,
+    "type": "Manutenção"
+  },
+  {
+    "id": 92,
+    "client": "Empresa 92",
+    "startDate": "2023-05-30",
+    "endDate": "2024-02-14",
+    "status": "Expirado",
+    "value": 8789,
+    "type": "Consultoria"
+  },
+  {
+    "id": 93,
+    "client": "Empresa 93",
+    "startDate": "2023-10-27",
+    "endDate": "2026-12-15",
+    "status": "Expirado",
+    "value": 26108,
+    "type": "Consultoria"
+  },
+  {
+    "id": 94,
+    "client": "Empresa 94",
+    "startDate": "2023-02-22",
+    "endDate": "2026-02-10",
+    "status": "Renovação Pendente",
+    "value": 60813,
+    "type": "Serviços"
+  },
+  {
+    "id": 95,
+    "client": "Empresa 95",
+    "startDate": "2023-12-23",
+    "endDate": "2025-05-12",
+    "status": "Ativo",
+    "value": 86327,
+    "type": "Consultoria"
+  },
+  {
+    "id": 96,
+    "client": "Empresa 96",
+    "startDate": "2023-11-04",
+    "endDate": "2026-01-25",
+    "status": "Ativo",
+    "value": 83492,
+    "type": "Serviços"
+  },
+  {
+    "id": 97,
+    "client": "Empresa 97",
+    "startDate": "2023-03-06",
+    "endDate": "2025-11-15",
+    "status": "Expirado",
+    "value": 58693,
+    "type": "Manutenção"
+  },
+  {
+    "id": 98,
+    "client": "Empresa 98",
+    "startDate": "2023-10-29",
+    "endDate": "2025-07-09",
+    "status": "Ativo",
+    "value": 69309,
+    "type": "Serviços"
+  },
+  {
+    "id": 99,
+    "client": "Empresa 99",
+    "startDate": "2022-04-27",
+    "endDate": "2025-07-21",
+    "status": "Expirado",
+    "value": 11815,
+    "type": "Manutenção"
+  },
+  {
+    "id": 100,
+    "client": "Empresa 100",
+    "startDate": "2023-11-20",
+    "endDate": "2024-03-13",
+    "status": "Expirado",
+    "value": 40857,
+    "type": "Serviços"
+  }
+]
