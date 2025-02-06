@@ -1,6 +1,8 @@
 import MetricCards from "../components/dashboard/MetricCards";
 import ContractsTable from "../components/dashboard/ContractsTable";
 import ContractsChart from "../components/dashboard/ContractsChart";
+import ContractsDistributionChartStatus from "components/dashboard/ContractsDistributionChartStatus";
+import ContractsDistributionChartServices from "components/dashboard/ContractsDistributionChartServices";
 
 const Dashboard = () => {
 
@@ -14,10 +16,12 @@ const Dashboard = () => {
       <MetricCards />
 
       {/* Gráficos */}
-      <ContractsChart />
+      <div className="grid grid-cols-2 gap-6">
+        <ContractsDistributionChartStatus />
+        <ContractsDistributionChartServices />
+      </div>
 
-      {/* Filtro com botão para adicionar novo contrato */}
-      
+      <ContractsChart />
 
       {/* Tabela de Contratos */}
       <ContractsTable />
