@@ -26,4 +26,24 @@
     -webkit-animation: slide 2s linear infinite;
     animation: slide 4s linear infinite;
   }
+
+  .card-yellow {
+    background-color: rgb(242, 244, 132);
+  }
+
+  .card-blue {
+    background-color: rgb(174, 219, 227);
+  }
+
+  .card-red {
+    background-color: rgb(255, 193, 227);
+  }
+  
+  .card-green {
+    background-color: rgb(174, 227, 219);
+  }
+
+  .border-cards-default {
+    border: 1px solid #d3d3d3;
+  }
 }
