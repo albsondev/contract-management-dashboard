@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "client": "Empresa XYZ",
+      "startDate": "2024-01-10",
+      "endDate": "2025-01-10",
+      "status": "Ativo",
+      "value": 15000,
+      "type": "Serviços"
+    },
+    {
+      "id": 2,
+      "client": "Fornecedor ABC",
+      "startDate": "2023-05-20",
+      "endDate": "2024-05-20",
+      "status": "Expirado",
+      "value": 32000,
+      "type": "Fornecimento"
+    }
+  ]
+  

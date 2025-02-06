@@ -9,7 +9,7 @@ const Sidebar = () => {
     <div
       className={`${
         isOpen ? "w-64" : "w-20"
-      } bg-blue-900 h-screen text-white transition-all duration-300`}
+      } bg-gray-100 h-screen text-gray-800 transition-all duration-300`}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}

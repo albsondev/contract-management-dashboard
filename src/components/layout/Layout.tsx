@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Sidebar />
       <div className="flex-1 flex flex-col">
         <Header />
-        <main className="p-6">{children}</main>
+        <main className="p-6 bg-gray-200">{children}</main>
       </div>
     </div>
   );
