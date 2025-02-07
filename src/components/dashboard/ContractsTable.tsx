@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import DataTable from 'react-data-table-component';
 import { formatDate } from "../../utils/formatDate";
-import { TableColumn } from 'react-data-table-component';
 import ContractsFilters from "./ContractsFilters";
 import { useNavigate } from "react-router-dom";
 import mockContracts from "../../assets/mockContracts.json"; // Importa os contratos mockados
@@ -51,14 +50,51 @@ const ContractsTable = () => {
     setFilteredContracts(filtered);
   };
 
+  interface Column {
+    name: string;
+    selector: (row: Contract) => string | number;
+    sortable: boolean;
+    cell?: (row: Contract) => JSX.Element;
+  }
 
-  const columns: TableColumn<Contract>[] = [
-    { name: 'ID', selector: (row: Contract) => row.id, sortable: true },
-    { name: 'Cliente', selector: (row: Contract) => row.client, sortable: true },
-    { name: 'Início', selector: (row: Contract) => row.startDate, format: (row: Contract) => formatDate(row.startDate), sortable: true },
-    { name: 'Vencimento', selector: (row: Contract) => row.endDate, format: (row: Contract) => formatDate(row.endDate), sortable: true },
-    { name: 'Status', selector: (row: Contract) => row.status, sortable: true },
-    { name: 'Valor', selector: (row: Contract) => row.value, cell: (row: Contract) => `R$ ${row.value.toLocaleString('pt-BR')}`, sortable: true }
+  const columns: Column[] = [
+    { name: 'ID', selector: row => row.id, sortable: true },
+    { name: 'Cliente', selector: row => row.client, sortable: true },
+    { name: 'Início', selector: row => formatDate(row.startDate), sortable: true },
+    { name: 'Vencimento', selector: row => formatDate(row.endDate), sortable: true },
+    { 
+      name: 'Status', 
+      selector: row => row.status, 
+      cell: row => {
+        let badgeClass = '';
+
+        switch (row.status) {
+          case 'Expirado':
+            badgeClass = 'bg-red-500 text-white';
+            break;
+          case 'Renovação Pendente':
+            badgeClass = 'bg-yellow-500 text-white';
+            break;
+          case 'Ativo':
+            badgeClass = 'bg-green-500 text-white';
+            break;
+          default:
+            badgeClass = 'bg-gray-300 text-black'; // Para casos não definidos
+        }
+
+        return (
+          <span className={`inline-flex items-center px-2 py-1 text-xs font-bold leading-none rounded-full ${badgeClass}`}>
+            {row.status}
+          </span>
+        );
+      },
+      sortable: true 
+    },
+    { 
+      name: 'Valor', 
+      selector: row => `R$ ${row.value.toLocaleString('pt-BR')}`, 
+      sortable: true 
+    }
   ];
 
   return (
