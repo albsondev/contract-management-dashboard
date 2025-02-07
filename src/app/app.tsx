@@ -12,7 +12,7 @@ const App = () => {
           <Route path="/" element={<Dashboard />} />
           <Route path="/contracts" element={<ContractForm onAddContract={() => {}} />} />
           <Route path="/reports" element={<Reports />} />
-          <Route path="/settings" element={<div>Configurações no futuro...</div>} />
+          <Route path="/settings" element={<div>Configurações no futuro!</div>} />
         </Routes>
       </Layout>
     </Router>
