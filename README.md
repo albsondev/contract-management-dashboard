@@ -1,102 +1,182 @@
-<p align='center'>
-  <img src='https://i.imgur.com/KVmyXyo.png' alt='Vital - Vite Starter Template' width='600'/>
-</p>
+# 📊 Dashboard de Gerenciamento de Contratos
 
-<p align='center'>
-Mocking up web app with <b>Vital</b><sup><em>(speed)</em></sup><br>
-</p>
+## 📌 Visão Geral
+Este projeto é um **dashboard interativo** para gerenciar contratos, fornecendo métricas, gráficos e uma tabela detalhada. Ele permite **visualizar, filtrar e analisar contratos**, ajudando na **tomada de decisões** sobre contratos ativos, expirados e pendentes de renovação.
 
-<br>
+🔗 **Demonstração:** _(Adicionar link do deploy, se disponível)_  
+📂 **Repositório:** _(Adicionar link do GitHub/GitLab)_
 
-<p align='center'>
-<a href="https://vital.josepvidal.dev">Live Demo</a>
-</p>
+---
 
-<br>
+## 🚀 Tecnologias Utilizadas
+✅ **React.js** – Biblioteca principal para desenvolvimento do frontend  
+✅ **TypeScript** – Tipagem estática para maior segurança do código  
+✅ **React Router** – Gerenciamento de rotas  
+✅ **Tailwind CSS** – Estilização moderna e responsiva  
+✅ **Chart.js** – Geração de gráficos interativos  
+✅ **React Data Table Component** – Exibição da tabela de contratos  
+✅ **LocalStorage** – Persistência dos dados localmente  
 
-## Features
+---
 
-- ⚡️ [React 18](https://beta.reactjs.org/)
-- 🦾 TypeScript, of course
-- 🎨 [Tailwind](https://tailwindcss.com/) - next generation utility-first CSS
-- 👑 [Atomic Design organization](https://bradfrost.com/blog/post/atomic-web-design/)
-- 🗂 [Relative imports](https://github.com/vitejs/vite/issues/88#issuecomment-762415200)
-- 😃 [Hero icons](https://heroicons.com/)
-- ☁️ Deploy on Netlify, zero-config
+## 📂 Estrutura do Projeto
+📦 `src/`  
+┣ 📂 `components/` – Componentes reutilizáveis (Tabelas, Charts, Filtros, Modal)  
+┣ 📂 `pages/` – Páginas principais da aplicação  
+┣ 📂 `assets/` – Arquivos JSON mockados  
+┣ 📂 `utils/` – Funções utilitárias (ex.: formatação de datas)  
+┣ 📄 `App.tsx` – Configuração principal da aplicação  
+┣ 📄 `main.tsx` – Ponto de entrada do projeto  
+┗ 📄 `README.md` – Documentação  
 
-### Coding Style
+---
 
-- [ESLint](https://eslint.org/) - configured for React/Hooks & TypeScript
-- [Prettier](https://prettier.io/)
+## 🔧 Instalação e Configuração
 
-### Dev tools
+### 🛠️ **Pré-requisitos**
+- **Node.js** instalado (versão 16+ recomendada)
+- **Gerenciador de pacotes**: `npm` ou `yarn`
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [Netlify](https://www.netlify.com/) - zero-config deployment
+### 📥 **Passo a Passo**
+1️⃣ Clone o repositório:
+```sh
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
+2️⃣ Instale as dependências:
 
-## Try it now!
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/jvidalv/vital/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
-
-```bash
-npx degit jvidalv/vital my-vital-app
-cd my-vital-app
-yarn # If you don't have yarn installed, run: npm install -g yarn
+```sh
+yarn install  # ou npm install
 ```
 
-## Checklist
+3️⃣ Inicie o projeto:
 
-When you use this template, try follow the checklist to update your info properly
-
-- [ ] Rename `name` and `author` fields in `package.json`
-- [ ] Change the author name in `LICENSE`
-- [ ] Change the title in `index.html`
-- [ ] Change the favicon in `public`
-- [ ] Modify the manifest in `public`
-- [ ] Clean up the README's
-
-And, enjoy :)
-
-## Usage
-
-### Development
-
-Just run and visit http://127.0.0.1:3000/
-
-```bash
-yarn dev
+```sh
+yarn dev  # ou npm run dev
 ```
 
-### Build
+4️⃣ Acesse no navegador:
 
-To build the App, run
-
-```bash
-yarn build
+```sh
+👉 http://localhost:5173/ (ou outra porta definida)
 ```
 
-And you will see the generated file in `dist` that ready to be served.
 
-### Deploy on Netlify
+## 🎯 Funcionalidades Implementadas
 
-Go to [Netlify](https://app.netlify.com/start) and select your repository, `OK` along the way, and your App will be live in a minute.
+### 📌 Dashboard Principal
 
-### Issues
+✅ Resumo em Cards – Total de contratos, contratos ativos, próximos ao vencimento e valor total
 
-#### Husky
+✅ Tabela Interativa – Filtros, ordenação e paginação de contratos
 
-If pre-commit hooks are not working be sure that you have installed husky: `husky install`.
+✅ Gráficos Dinâmicos – Distribuição de contratos por status e tipo
 
-By default this command should be triggered after yarn/npm deps are installed.
 
-## Why
+### 📊 Gráficos
 
-I have created several React apps recently. Setting the configs up is kinda the bottleneck for me to make the ideas simply come true within a very short time.
+✅ Expiração de Contratos – Exibe a quantidade de contratos vencendo nos próximos meses
 
-So I made this starter template for myself to create apps more easily, along with some good practices that I have learned from making those apps. Feel free to tweak it or even maintains your own forks.
+✅ Distribuição por Status – Mostra contratos ativos, expirados e pendentes de renovação
+
+✅ Distribuição por Tipo – Agrupa contratos por tipo (Serviços, Fornecimento, etc.)
+
+✅ Filtros Dinâmicos – Intervalo de datas e status
+
+
+### 📑 Tabela de Contratos
+
+✅ Exibição de Detalhes – Modal com informações do contrato ao clicar na tabela
+
+✅ Filtros – Permite filtrar contratos por status, tipo e data
+
+✅ Paginação – Suporte para grandes volumes de dados
+
+
+### ➕ Cadastro de Contratos
+
+✅ Formulário para Adicionar Contratos
+
+✅ Persistência com LocalStorage
+
+✅ Redirecionamento automático para o Dashboard
+
+<hr>
+
+## 📌 Decisões Técnicas e Justificativas
+
+### 📌 Framework e Bibliotecas
+
+- React.js + TypeScript: Escalabilidade e segurança com tipagem estática
+- Tailwind CSS: Facilidade na estilização e responsividade
+- React Router: Gerenciamento eficiente de páginas
+- Chart.js: Visualizações interativas
+- React Data Table Component: Gerenciamento de tabelas com filtros avançados
+
+
+### 📌 Gerenciamento de Estado
+
+Foi utilizado useState e useEffect para controle de estados e sincronização dos contratos.
+
+📌 Motivo: O escopo do projeto não exige Redux, já que os dados são armazenados localmente.
+
+<hr>
+
+
+## 🧪 Testes
+
+O projeto atualmente não inclui testes automatizados, mas recomenda-se o uso de:
+
+- Jest + React Testing Library – Testes unitários para componentes
+- Cypress – Testes de integração (fluxo de usuário)
+
+<hr>
+
+
+## 🏆 Desafios e Soluções
+
+
+### 1️⃣ Persistência dos Contratos
+
+    🔴 Problema: Após adicionar um contrato, ele não era salvo corretamente.
+
+    ✅ Solução: Implementação de LocalStorage para armazenar contratos e exibir corretamente no dashboard.
+
+### 2️⃣ Filtros nos Gráficos
+
+    🔴 Problema: Ao alterar um filtro, os gráficos não eram atualizados imediatamente.
+
+    ✅ Solução: Uso do useEffect para monitorar mudanças no estado e atualizar os gráficos dinamicamente.
+
+### 3️⃣ Exibição do Status no Modal
+
+    🔴 Problema: Status aparecia como texto simples.
+
+    ✅ Solução: Implementação de badges coloridas para melhor visualização.
+
+  <hr>
+
+  ## 🏗️ Melhorias Futuras
+
+🔹 API Real – Integrar com backend para buscar contratos dinamicamente
+
+🔹 Testes Automatizados – Implementar Jest e Cypress
+
+🔹 Exportação de Dados – Permitir exportação dos contratos para CSV
+
+<hr>
+
+## 📌 Como a IA foi Utilizada no Desenvolvimento?
+
+Para acelerar o desenvolvimento, foram utilizados modelos de IA para:
+
+    - Auxílio na estruturação do projeto e boas práticas de código
+    - Correções de bugs e melhorias de performance
+    - Geração de trechos de código repetitivos e otimizações
+    - No entanto, toda a lógica e estrutura do sistema foram validadas e refinadas manualmente.
+
+
+  <hr>
+
+  
+
