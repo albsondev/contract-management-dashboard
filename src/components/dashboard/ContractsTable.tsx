@@ -3,6 +3,7 @@ import DataTable from 'react-data-table-component';
 import { formatDate } from "../../utils/formatDate";
 import ContractsFilters from "./ContractsFilters";
 import { useNavigate } from "react-router-dom";
+import ContractDetailsModal from "./ContractDetailsModal"; // Importa o modal
 import mockContracts from "../../assets/mockContracts.json"; // Importa os contratos mockados
 
 interface Contract {
@@ -18,6 +19,7 @@ interface Contract {
 const ContractsTable = () => {
   const [contracts, setContracts] = useState<Contract[]>([]);
   const [filteredContracts, setFilteredContracts] = useState<Contract[]>([]);
+  const [selectedContract, setSelectedContract] = useState<Contract | null>(null); // Estado para o contrato selecionado
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -52,8 +54,8 @@ const ContractsTable = () => {
 
   interface Column {
     name: string;
-    selector: (row: Contract) => string | number;
-    sortable: boolean;
+    selector?: (row: Contract) => string | number;
+    sortable?: boolean;
     cell?: (row: Contract) => JSX.Element;
   }
 
@@ -79,7 +81,7 @@ const ContractsTable = () => {
             badgeClass = 'bg-green-500 text-white';
             break;
           default:
-            badgeClass = 'bg-gray-300 text-black'; // Para casos não definidos
+            badgeClass = 'bg-gray-300 text-black';
         }
 
         return (
@@ -94,6 +96,17 @@ const ContractsTable = () => {
       name: 'Valor', 
       selector: row => `R$ ${row.value.toLocaleString('pt-BR')}`, 
       sortable: true 
+    },
+    { 
+      name: 'Ações',
+      cell: row => (
+        <button
+          onClick={() => setSelectedContract(row)}
+          className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+        >
+          Ver Detalhes
+        </button>
+      )
     }
   ];
 
@@ -113,6 +126,9 @@ const ContractsTable = () => {
         responsive
         defaultSortFieldId="id"
       />
+
+      {/* Modal para exibir detalhes */}
+      {selectedContract && <ContractDetailsModal contract={selectedContract} onClose={() => setSelectedContract(null)} />}
     </div>
   );
 };
