@@ -16,10 +16,11 @@ const Dashboard = () => {
       <MetricCards />
 
       {/* Gráficos */}
-      <div className="grid grid-cols-2 gap-6">
-        <ContractsDistributionChartStatus />
-        <ContractsDistributionChartServices />
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {/* Alteração para garantir que seja 1 coluna em telas menores */}
+  <ContractsDistributionChartStatus />
+  <ContractsDistributionChartServices />
+</div>
+
 
       <ContractsChart />
 
