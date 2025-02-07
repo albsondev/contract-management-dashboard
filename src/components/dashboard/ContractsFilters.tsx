@@ -17,7 +17,7 @@ const ContractsFilters = ({ onAddClick, onFilterChange }: ContractsFiltersProps)
   }, [status, type, startDate, endDate, onFilterChange]); // Dependências para aplicar a filtragem
 
   return (
-    <div className="bg-white shadow rounded-lg p-4 mb-4 flex flex-wrap gap-4 items-center justify-between">
+    <div className="bg-zinc-50 border border-gray-300 shadow rounded-lg p-4 mb-4 flex flex-wrap gap-4 items-center justify-between">
       {/* Filtro por Status */}
       <select
         className="border p-2 rounded w-40"

@@ -40,7 +40,19 @@ const ContractForm = ({ onAddContract }: { onAddContract: (contract: Contract) =
       type: formData.type
     };
 
-    onAddContract(newContract);
+    // Recuperar contratos do localStorage
+    const savedContracts = JSON.parse(localStorage.getItem("contracts") || "[]");
+
+    // Adicionar o novo contrato à lista existente
+    const updatedContracts = [...savedContracts, newContract];
+
+    // Salvar a lista atualizada no localStorage
+    localStorage.setItem("contracts", JSON.stringify(updatedContracts));
+
+    // Chamar a função onAddContract (caso necessário)
+    if (onAddContract) {
+      onAddContract(newContract);
+    }
 
     // Redireciona para o Dashboard
     navigate("/");

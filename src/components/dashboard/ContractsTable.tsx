@@ -118,7 +118,6 @@ const ContractsTable = () => {
       <ContractsFilters onAddClick={() => navigate("/contracts")} onFilterChange={handleFilterChange} />
 
       <DataTable
-        title="Contratos"
         columns={columns}
         data={filteredContracts}
         pagination
