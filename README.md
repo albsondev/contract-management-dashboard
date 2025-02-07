@@ -170,9 +170,7 @@ O projeto atualmente não inclui testes automatizados, mas recomenda-se o uso de
 
 Para acelerar o desenvolvimento, foram utilizados modelos de IA para:
 
-    - Auxílio na estruturação do projeto e boas práticas de código
     - Correções de bugs e melhorias de performance
-    - Geração de trechos de código repetitivos e otimizações
     - No entanto, toda a lógica e estrutura do sistema foram validadas e refinadas manualmente.
 
 
