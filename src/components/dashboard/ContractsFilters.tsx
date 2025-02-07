@@ -17,10 +17,10 @@ const ContractsFilters = ({ onAddClick, onFilterChange }: ContractsFiltersProps)
   }, [status, type, startDate, endDate, onFilterChange]); // Dependências para aplicar a filtragem
 
   return (
-    <div className="bg-zinc-50 border border-gray-300 shadow rounded-lg p-4 mb-4 flex flex-wrap gap-4 items-center justify-between">
+    <div className="bg-zinc-50 border border-gray-300 shadow rounded-lg p-4 mb-4 flex flex-col md:grid md:grid-cols-2 gap-4"> {/* Uso de grid para versões desktop */}
       {/* Filtro por Status */}
       <select
-        className="border p-2 rounded w-40"
+        className="border p-2 rounded w-full" // Ocupa 100% da largura disponível em mobile
         value={status}
         onChange={(e) => setStatus(e.target.value)} // Atualiza o estado sem necessidade de função extra
       >
@@ -32,7 +32,7 @@ const ContractsFilters = ({ onAddClick, onFilterChange }: ContractsFiltersProps)
 
       {/* Filtro por Tipo */}
       <select
-        className="border p-2 rounded w-40"
+        className="border p-2 rounded w-full" // Ocupa 100% da largura disponível em mobile
         value={type}
         onChange={(e) => setType(e.target.value)} // Atualiza o estado sem necessidade de função extra
       >
@@ -46,7 +46,7 @@ const ContractsFilters = ({ onAddClick, onFilterChange }: ContractsFiltersProps)
       {/* Filtro por Data de Início */}
       <input
         type="date"
-        className="border p-2 rounded"
+        className="border p-2 rounded w-full" // Ocupa 100% da largura disponível em mobile
         value={startDate}
         onChange={(e) => setStartDate(e.target.value)} // Atualiza o estado sem necessidade de função extra
       />
@@ -54,19 +54,19 @@ const ContractsFilters = ({ onAddClick, onFilterChange }: ContractsFiltersProps)
       {/* Filtro por Data de Vencimento */}
       <input
         type="date"
-        className="border p-2 rounded"
+        className="border p-2 rounded w-full" // Ocupa 100% da largura disponível em mobile
         value={endDate}
         onChange={(e) => setEndDate(e.target.value)} // Atualiza o estado sem necessidade de função extra
       />
 
       {/* Botão para Adicionar Novo Contrato */}
-      <button onClick={onAddClick} className="bg-green-500 text-white px-4 py-2 rounded">
+      <button onClick={onAddClick} className="bg-green-500 text-white px-4 py-2 rounded w-full">
         + Novo Contrato
       </button>
 
       {/* Botão para Limpar Filtros */}
       <button
-        className="bg-gray-500 text-white px-4 py-2 rounded"
+        className="bg-gray-500 text-white px-4 py-2 rounded w-full"
         onClick={() => {
           setStatus("");
           setType("");
