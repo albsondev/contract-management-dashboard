@@ -57,10 +57,11 @@ const ContractsTable = () => {
     selector?: (row: Contract) => string | number;
     sortable?: boolean;
     cell?: (row: Contract) => JSX.Element;
+    width?: string;
   }
 
   const columns: Column[] = [
-    { name: 'ID', selector: row => row.id, sortable: true },
+    { name: 'ID', selector: row => row.id, sortable: true, width: '80px' },
     { name: 'Cliente', selector: row => row.client, sortable: true },
     { name: 'Início', selector: row => formatDate(row.startDate), sortable: true },
     { name: 'Vencimento', selector: row => formatDate(row.endDate), sortable: true },
