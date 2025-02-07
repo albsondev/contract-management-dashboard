@@ -37,7 +37,8 @@ const ContractDetailsModal: React.FC<ModalProps> = ({ contract, onClose }) => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
         <h2 className="text-xl font-semibold text-gray-800 mb-4">Detalhes do Contrato</h2>
-        <div className="space-y-2">
+        <hr />
+        <div className="space-y-4 mt-4 mb-4">
           <p><strong>ID:</strong> {contract.id}</p>
           <p><strong>Cliente:</strong> {contract.client}</p>
           <p><strong>Tipo:</strong> {contract.type}</p>
@@ -51,6 +52,7 @@ const ContractDetailsModal: React.FC<ModalProps> = ({ contract, onClose }) => {
           </p>
           <p><strong>Valor:</strong> R$ {contract.value.toLocaleString("pt-BR")}</p>
         </div>
+        <hr />
         <div className="mt-4 flex justify-end">
           <button
             onClick={onClose}
