@@ -3,8 +3,8 @@
 ## 📌 Visão Geral
 Este projeto é um **dashboard interativo** para gerenciar contratos, fornecendo métricas, gráficos e uma tabela detalhada. Ele permite **visualizar, filtrar e analisar contratos**, ajudando na **tomada de decisões** sobre contratos ativos, expirados e pendentes de renovação.
 
-🔗 **Demonstração:** _(Adicionar link do deploy, se disponível)_  
-📂 **Repositório:** _(Adicionar link do GitHub/GitLab)_
+🔗 **Demonstração:** _https://contract-management-dashboard.vercel.app/_  
+📂 **Repositório:** _https://github.com/albsondev/contract-management-dashboard_
 
 ---
 
